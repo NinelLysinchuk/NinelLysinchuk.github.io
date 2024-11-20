@@ -1,0 +1,279 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.crm {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.sidebar {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 0.5em;
+  width: 200px;
+  color:  #838383; 
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+}
+
+.logo {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.sidebar__version {
+  color: #838383;
+  font-size: 8pt;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  flex-grow: 1; 
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+  padding: 0.8em 3em;
+  border-radius: 0.3em;
+  color: #838383;;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu__item:hover {
+  background-color: #2315e9;
+  color: #ffffff;
+}
+
+.menu__item--active {
+  background-color: #6a0dad; 
+  color: #fff;
+}
+
+.menu__icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.5em;
+  filter: grayscale(100%); 
+}
+
+.menu__item--active .menu__icon {
+  filter: none; 
+}
+
+.menu__text {
+  flex-grow: 1;
+  font-size: 0.9rem;
+  padding: 0 0.3em;
+}
+
+
+.menu__arrow {
+  margin-left: auto; 
+  font-size: 1.2em;
+  color: #838383;
+}
+
+
+.menu__item--active .menu__arrow {
+  color: #fff;
+}
+
+
+.user {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.user__photo {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+
+.user__info {
+  font-size: 0.8rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  padding: 0.7em;
+}
+
+.user__name {
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+.user__position {
+  font-size: 0.75rem;
+  color: #777;
+}
+
+
+.header__search {
+  position: relative;
+}
+
+.header__search-input {
+  padding: 0.7em 1em 0.7em 2.5em;
+  border: 0.08em solid #bdc3c7;
+  border-radius: 0.3em;
+  background-color: #F9FBFF;
+  font-size: 10pt;
+  width: 14em;
+}
+
+.header__search-input::placeholder {
+  font-size: 11pt;
+  color: #7f8c8d;
+}
+
+.header__search::before{
+  content: '';
+  position: absolute;
+  top: 18%;
+  left: 0.8em;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url('icons/search.svg') no-repeat center;
+  background-size: contain;
+}
+
+.customers{
+  overflow-x: auto;
+  
+}
+
+.customers__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.customers__table th,
+.customers__table td {
+  padding: 0.8em;
+  font-size: 12pt;
+  text-align: left;
+  border-bottom: 0.08em solid #bdc3c7;
+}
+
+.customers__table th {
+  font-weight: bold;
+}
+
+.customer__status {
+  padding: 0.5em;
+    width: 6em;
+  font-size: 12pt;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+  
+}
+
+.customer__status--active {
+  background-color: #16c0987c;
+  color: #008767;  
+  border: 1px solid #008767;
+  
+}
+
+.customer__status--inactive {
+  background-color: #FFC5C5;
+  color: #DF0404;
+  border: 1px solid #DF0404;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+  font-size: 8pt;
+  color: #B5B7C0;
+}
+
+.footer__pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+}
+
+.footer__page-button,
+.footer__nav-button {
+  padding: 0.5em;
+  width: 2.6em;
+  height: 2.6em;
+  border: 0.08em solid #F5F5F5;
+  border-radius: 0.5em;
+  background-color: #ecf0f1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8pt;
+}
+
+.footer__page-button--active {
+  background-color: #5932EA;
+  color: #fff;
+}
+
+.footer__dots {
+  padding: 0.3em;
+  color: #7f8c8d;
+  pointer-events: none;
+  font-size: 8pt;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background: #edf4f7;
+    padding: 1em;
+}
+
+.main__greetings{
+  font-size: 15pt;
+  margin-left: 3.5em;
+  margin-top: 1.3em;
+}
+
+.clients{
+  padding: 3em;
+  background-color: white;
+  border-radius: 2em;
+  margin: 4em;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__description{
+  color:#16C098
+}
