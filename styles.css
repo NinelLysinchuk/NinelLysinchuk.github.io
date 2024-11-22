@@ -12,7 +12,7 @@ body {
 }
 
 .crm__sidebar{
-  
+  width: 20%;
 }
 
 .sidebar__logo {
@@ -251,6 +251,10 @@ body {
   color: #7f8c8d;
   pointer-events: none;
   font-size: 8pt;
+}
+
+.crm__main{
+  width:78%;
 }
 
 .main{
