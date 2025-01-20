@@ -1,0 +1,104 @@
+:root{
+  --red: #ff0000;
+  --neonGreen: #2bff00;
+}
+
+body{
+  font-size: 13pt;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 15pt;
+}
+
+.description{
+  margin: 5px 0;
+}
+
+.info__link{
+  text-decoration: none;
+}
+
+.info-green{
+  color: var(--neonGreen);
+}
+
+.rights{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.rights__title{
+  padding: 5px 25px;
+  cursor: pointer;
+}
+
+.title-left, .description-left{
+  padding: 0 5px;
+}
+
+.rights__description, .rights__options{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.rights__checkbox:checked ~.rights__description, 
+.rights__checkbox:checked ~.rights__options{
+  max-height: 1000px;
+}
+
+.rights__checkbox{
+  display: none;
+}
+
+.rights__options{
+  display: flex;
+  flex-direction: column;
+  margin: 5px 20px;
+  text-wrap: wrap;
+}
+
+.option{
+  padding: 2px 0;
+}
+
+.option__text{
+  line-height: 1.5em;
+}
+
+.checkbox{
+  margin-right: 15px;
+}
+
+table{
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  
+}
+
+tr, td, th{
+  border: 1px solid black;
+  padding: 5px;
+  text-align: left;
+  width: 30%;
+}
+
+.weight{
+  font-weight: 100;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.red{
+ color: var(--red)
+}
