@@ -16,6 +16,10 @@ strong{
   font-size: 15pt;
 }
 
+.personal__title{
+  padding-left: 6px;
+}
+
 .description{
   margin: 5px 0;
 }
@@ -60,7 +64,7 @@ strong{
   /*align-items: center;
   text-align: center;*/
   transition: max-height 0.3s ease-in-out;
-  padding: 0 100px;
+  margin: 0 100px;
 }
 
 .rights__checkbox:checked ~.rights__description{
@@ -140,4 +144,8 @@ tr, td, th{
 
 .red{
  color: var(--red)
+}
+
+.data__table{
+  margin-left: 10px;
 }
