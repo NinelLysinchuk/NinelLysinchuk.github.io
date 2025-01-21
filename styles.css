@@ -7,6 +7,10 @@ body{
   font-size: 13pt;
 }
 
+strong{
+  text-wrap: nowrap;
+}
+
 .title{
   font-weight: bold;
   font-size: 15pt;
@@ -28,6 +32,9 @@ body{
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
 }
 
 .rights__title{
@@ -35,17 +42,30 @@ body{
   cursor: pointer;
 }
 
-.title-left, .description-left{
+.title-left{
   padding: 0 5px;
 }
 
-.rights__description, .rights__options{
+.rights__description{
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
 }
 
-.rights__checkbox:checked ~.rights__description, 
+.rights__options{
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;
+  text-align: center;*/
+  transition: max-height 0.3s ease-in-out;
+  padding: 0 100px;
+}
+
+.rights__checkbox:checked ~.rights__description{
+  max-height: 200px;
+} 
 .rights__checkbox:checked ~.rights__options{
   max-height: 1000px;
 }
@@ -54,19 +74,38 @@ body{
   display: none;
 }
 
-.rights__options{
+/*.rights__options{
   display: flex;
   flex-direction: column;
   margin: 5px 20px;
   text-wrap: wrap;
+} */
+
+.rights__options label {
+  display: flex;
+  align-items: flex-start;
+  text-wrap: wrap;
+  /*justify-content: center;*/
+  width: 100%;
+}
+
+
+.rights__options .checkbox{
+  margin-top: 3px;
+  flex-shrink: 0;
 }
 
 .option{
   padding: 2px 0;
+  line-height: 1.5em;
+  flex-grow: 1;
+  max-width: 600px;
 }
 
-.option__text{
-  line-height: 1.5em;
+.option__special{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .checkbox{
@@ -74,7 +113,7 @@ body{
 }
 
 table{
-  width: 80%;
+  width: 82%;
   border-collapse: collapse;
   margin: 20px 0;
   
@@ -87,15 +126,15 @@ tr, td, th{
   width: 30%;
 }
 
-.weight{
+.specialWeight{
   font-weight: 100;
 }
 
-.bold{
+.specialBold{
   font-weight: bold;
 }
 
-.underline{
+.specialUnderline{
   text-decoration: underline;
 }
 
