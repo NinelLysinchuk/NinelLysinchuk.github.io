@@ -16,12 +16,9 @@ strong{
   font-size: 15pt;
 }
 
-.personal__title{
-  padding-left: 6px;
-}
 
 .description{
-  margin: 5px 0;
+  margin: 5px 2px;
 }
 
 .info__link{
@@ -38,7 +35,7 @@ strong{
   overflow: hidden;
   padding: 10px;
   margin: 10px;
-  width: 80%;
+  width: 75%;
 }
 
 .rights__title{
@@ -64,7 +61,8 @@ strong{
   /*align-items: center;
   text-align: center;*/
   transition: max-height 0.3s ease-in-out;
-  margin: 0 100px;
+  padding: 0 100px;
+  margin-top: 10px;
 }
 
 .rights__checkbox:checked ~.rights__description{
@@ -117,7 +115,7 @@ strong{
 }
 
 table{
-  width: 82%;
+  width: 77%;
   border-collapse: collapse;
   margin: 20px 0;
   
