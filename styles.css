@@ -59,7 +59,7 @@ strong{
   display: flex;
   flex-direction: column;
   transition: max-height 0.3s ease-in-out;
-  padding: 0 100px;
+  /*padding: 0 100px;*/
   margin-top: 10px;
 }
 
